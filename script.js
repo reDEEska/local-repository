@@ -1,10 +1,11 @@
+//4. Простое общение с пользователем
+
 //const question = confirm('Are you here?')
 // console.log(question); //true or false
 // const answer = +prompt('Вам есть 18', 'Уверен?');
 // console.log(answer); //уверен?
-===
-=== =
 
+////////////////////////////
 
 // тернарный оператор ? / :
 // условие ? выражение1 : выражение2 
