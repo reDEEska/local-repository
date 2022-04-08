@@ -130,3 +130,71 @@ function done() {
    console.log('Я прошел этот урок!');
 }
 learnJS('JavaScript', done);
+
+//Объекты. Деструктуризация.
+
+const option = {
+   name: 'test',
+   width: 1024,
+   height: 1024,
+   colors: {
+      border: 'black',
+      bg: 'red'
+   },
+   makeTest: function () {
+      console.log('Test');
+   }
+
+};
+
+//Деструктуризация
+const {
+   border,
+   bg
+} = option.colors;
+
+console.log(border);
+
+
+
+console.log(Object.keys(option).length); // передаёт количество ключей в объекте
+
+// let counter = 0;
+// for (let key in option) {
+//    if (typeof (option[key]) === 'object') {
+//       for (let i in option[key]) {
+//          console.log(`Свойство ${i} имеет значение ${option[key][i]}`);
+//          counter++
+//       }
+//    } else {
+//       console.log(`Свойство ${key} имеет значение ${option[key]}`);
+//       counter++
+//    }
+// }
+// console.log(counter);
+
+//Массивы и псевдомассивы
+
+const arr = [1, 2, 3, 6, 8];
+
+//arr.pop(); //удаляет последний елемент
+//arr.push(10); //добавляет улумент в конец масива
+
+// цикл для перебора массива
+for (let i = 0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+//for of метод для перебора массива
+for (let value of arr) {
+   console.log(value);
+}
+
+arr.forEach(function (item, i, arr) {
+   console.log(`${i}: ${item} внутри масива ${arr}`);
+});
+
+{
+   const str = prompt('', '');
+   const products = str.split(', '); // превращает строку в массив
+   console.log(products.join(': ')); // превращает массив в строку
+}
